@@ -20,6 +20,8 @@ const AppRoutes = ({ user, setUser, modelos }) => {
           />
           <Route path="/registeruser" element={<Register />} />
           <Route path="/Productos" element={<Productos modelos={modelos} />} />
+          {/* <Route path="/users/:id" component={UserDetail} /> */}
+
            {/* Agrega la ruta para el componente Login */}
            {/* <Route path="/login" element={<Login />} /> */}
         </Routes>
