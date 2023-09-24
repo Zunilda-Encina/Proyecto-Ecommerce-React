@@ -1,24 +1,36 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import  '../src/App.css'
-import Header from './component/Header.jsx'
-import Banner from './component/Banner.jsx'
-import Product from './component/Product.jsx'
-import Footer from './component/Footer.jsx'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+// import { AppRouter } from './router';
+import AppRoutes from './router.jsx'; 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
+import ModelosDeZapatillas from './component/Api/zapasApi.jsx'; // Importa la API
 
 function App() {
-  
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const userValidate = JSON.parse(localStorage.getItem('user'));
+    setUser(userValidate);
+  }, []);
 
   return (
-    <>
-      <Header/>
-      <Banner />
-      <Product/>
-      <Footer/>
-    </>
-  )
+
+    <Router>
+      <AppRoutes user={user} setUser={setUser} modelos={ModelosDeZapatillas} />
+    </Router>
+    
+    // <Router> 
+    //   <Routes>
+    //     <Route
+    //       path="*"
+    //       element={<AppRouter user={user} setUser={setUser} modelos={ModelosDeZapatillas} />}
+    //     />
+    //   </Routes>
+    // </Router>
+  );
 }
 
-export default App
+export default App;

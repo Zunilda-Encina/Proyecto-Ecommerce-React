@@ -5,12 +5,13 @@ function Banner() {
    
   return(
       <>
-        <section ClassName="hero">
-        <div ClassName="container">
-          <h1 ClassName="display-4">Descubre la nueva colección</h1>
-          <a ClassName="btn btn-primary btn-lg" href="#" role="button">Ver más</a>
+        <section className="hero">
+        <div className="container">
+          <h1 className="display-4">Descubre la nueva colección</h1>
+          <a className="btn btn-primary btn-lg" href="#" role="button">Ver más</a>
         </div>
       </section>
+      <a href="https://wa.link/d6u0uo" className="btn-wsp" target="_blank"><i className="fa-brands fa-whatsapp"></i></a>
       </>
     )
    
