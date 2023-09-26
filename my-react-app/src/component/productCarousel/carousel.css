@@ -1,7 +1,17 @@
-/* Estilos CSS para los nombres en el carrusel */
+
+
+/* Estilo para los títulos de los modelos en el carrusel */
+.carousel-title {
+  font-size: 18px; /* Tamaño de fuente deseado */
+  font-weight: bold;
+  color: white; /* Color del texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mayor legibilidad */
+}
+
+/* Estilo para el fondo del título */
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-  color: white;
+  color: white; /* Color del texto */
   text-align: center;
   padding: 10px;
   position: absolute;
@@ -10,7 +20,7 @@
   width: 100%;
 }
 
-/* Estilo para el título h3 */
+/* Estilo para el título h3 dentro del título */
 .carousel-caption h3 {
   font-size: 1.5rem; /* Tamaño del título */
   margin: 0;

@@ -16,13 +16,16 @@
   @media (max-width: 575px) {
     a {
       font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+      .titulo{
+        display: none;
+      }
     }
   }
 
 .allNavBox {
     padding: 0px 20px;
     font-family: System-ui;
-    background-color: #fff;
+    background-color: #9eddff83;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,13 +49,32 @@
 .navBox{
   display: flex;
   justify-content: space-around;
-  width: 15%;
+  width: 20%;
   height: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.ulNav{
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  padding: 0;
+  margin:0;
   align-items: center;
 }
 
-.itemNav{ /*TODOS LOS LINKS CON LA CLASE ITEMNAV*/
+.listaNav{
+  display: flex;
+  align-items: center;
   
+
+}
+
+.itemNav{ /*TODOS LOS LINKS CON LA CLASE ITEMNAV*/
+  display: flex;
+  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-large;
   border-radius: 8px;

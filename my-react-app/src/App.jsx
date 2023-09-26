@@ -19,17 +19,9 @@ function App() {
   return (
 
     <Router>
+      
       <AppRoutes user={user} setUser={setUser} modelos={ModelosDeZapatillas} />
     </Router>
-    
-    // <Router> 
-    //   <Routes>
-    //     <Route
-    //       path="*"
-    //       element={<AppRouter user={user} setUser={setUser} modelos={ModelosDeZapatillas} />}
-    //     />
-    //   </Routes>
-    // </Router>
   );
 }
 

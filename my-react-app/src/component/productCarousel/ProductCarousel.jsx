@@ -28,20 +28,17 @@ function CarruselDeZapatillas() {
   }, [chunkedModelos]);
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={null} className="my-carousel">
       {chunkedModelos.map((grupo, grupoIndex) => (
-        <Carousel.Item key={grupoIndex}>
+        <Carousel.Item key={grupoIndex} className="carousel-item">
           <Row>
             {grupo.map((modelo) => (
-              <Col key={modelo.id} sm={4}>
+              <Col key={modelo.id} sm={4} className="carousel-col">
                 <img
                   src={modelo.imagen}
+                  className="d-block w-100 carousel-image"
                   alt={modelo.nombre}
-                  className="d-block w-100"
                 />
-                <Carousel.Caption>
-                  <h3>{modelo.nombre}</h3>
-                </Carousel.Caption>
               </Col>
             ))}
           </Row>
@@ -52,4 +49,3 @@ function CarruselDeZapatillas() {
 }
 
 export default CarruselDeZapatillas;
-
