@@ -64,7 +64,7 @@ function SearchBar() {
                 <h2 className="search-title">{modelo.nombre}</h2>
                 </Link>
                 {/* <p>Color: {modelo.color}</p> */}
-                <p>Precio: {modelo.precio}</p>
+                <p>US$ {modelo.precio}</p>
                 {/* <p>Talles: {modelo.talle.join(', ')}</p> */}
                 {/* <p>{modelo.Description}</p> */}
               </div>

@@ -125,41 +125,5 @@ padding: 50px 0;
 margin-bottom: 30px;
 }
 /*-------------------------------------------ACA ARRANCA EL FOOTER----------------------------------------------------*/
-.footer {
-background-color: #333;
-color: #fff;
-padding: 50px 0;
-}
-
-.footer h5 {
-font-size: 16px;
-margin-bottom: 15px;
-}
-
-.footer ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-
-.footer ul li {
-margin-bottom: 10px;
-}
-
-.footer ul li a {
-color: #fff;
-text-decoration: none;
-}
-
-.footer-bottom {
-background-color: #222;
-padding: 10px 0;
-text-align: center;
-}
-
-.footer-bottom p {
-margin: 0;
-font-size: 15px;
-}
 
 /*ACA TERMINA EL FOOTER*/

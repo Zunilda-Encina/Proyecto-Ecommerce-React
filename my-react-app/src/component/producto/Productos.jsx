@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../Navbar/Navbar.jsx';
+// import NavBar from '../Navbar/Navbar.jsx';
 import Product from '../Product.jsx';
 import ModelosDeZapatillas from '../Api/zapasApi.jsx';
 import "./producto.css"
@@ -31,7 +31,7 @@ function Productos({ modelos }) {
 
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <section className="products">
         <div className="container">
           <h2 className="text-center">Todos nuestros Productos</h2>
@@ -64,23 +64,7 @@ function Productos({ modelos }) {
             />
           </div>
 
-          <div className="row">
-            {modelosFiltrados.map((modelo) => (
-              <div className="col-md-4" key={modelo.id}>
-                <div className="card">
-                  <img
-                    src={modelo.imagen}
-                    className="card-img-top"
-                    alt={modelo.nombre}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{modelo.nombre}</h5>
-                    <p className="card-text">Precio: {modelo.precio}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Product modelos={modelosFiltrados} />      
         </div>
       </section>
     </>

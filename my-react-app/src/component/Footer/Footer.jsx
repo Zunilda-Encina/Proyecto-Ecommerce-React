@@ -1,5 +1,6 @@
 import React from 'react'
-import  '../assets/css/style.css'
+import  '../../assets/css/style.css'
+import './footer.css'
 
 function Footer(){
     return (
@@ -7,9 +8,11 @@ function Footer(){
         <section className="Footer">
             <footer className="footer">
     <div className="container">
+    <img className='logo' src="https://cdn.discordapp.com/attachments/1154158862199435424/1154158885733675110/LOGOJORDAN_001.png" alt="" />
+
       <div className="row">
         <div className="col-md-3">
-          <h5>ZapasFacheras</h5>
+          <h5>Zapas Facheras</h5>
           <ul>
             <li><a href="#">Sobre nosotros</a></li>
             <li><a href="#">Carreras</a></li>
@@ -25,11 +28,11 @@ function Footer(){
           </ul>
         </div>
         <div className="col-md-3">
-          <h5>Redes sociales</h5>
+          <h5>Seguinos</h5>
           <ul>
-            <li><a href="#"><i className="fab fa-facebook-f"></i> Facebook</a></li>
-            <li><a href="#"><i className="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="#"><i className="fab fa-instagram"></i> Instagram</a></li>
+            <li  className="iconos"><a href="#"><i className="fab fa-facebook-f"></i></a></li>
+            <li  className="iconos"><a href="#"><i className="fab fa-twitter"></i> </a></li>
+            <li  className="iconos"><a href="#"><i className="fab fa-instagram"></i></a></li>
           </ul>
         </div>
         <div className="col-md-3">

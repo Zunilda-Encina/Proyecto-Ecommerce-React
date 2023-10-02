@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../search/SearchBar.jsx';
 import './navbar.css'
@@ -7,21 +7,29 @@ import './navbar.css'
 import ModelosDeZapatillas from '../Api/zapasApi.jsx';
 
 const NavBar = ({ user, setUser, modelos }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-      <header> 
+      <header > 
           <div className ="allNavBox" >
+            
             <div className='logoBox'>
               <img className='imgLogo' src="https://cdn.discordapp.com/attachments/1154158862199435424/1154158885733675110/LOGOJORDAN_001.png" alt="LOGO" />
-              <h1>ZAPAS FACHERAS</h1>
+              <h1 className='titulo'>ZAPAS FACHERAS</h1>
             </div>
 
             <div className='navBox'>
-              <Link to='/' className='itemNav' >Home </Link>
-              <Link to='/Productos' className="itemNav" > Productos</Link>
+              <ul className='ulNav'>
+                <li className='listaNav'><Link to='/' className='itemNav' >Inicio </Link></li>
+                <li className='listaNav'><Link to='/Productos' className="itemNav" > Productos</Link></li>
+              </ul>
               {/* <Link to='/Login' className='itemNav'>Login</Link> */}
             </div>
 
-            <div className='searchBox'>
+            <div className={`search-bar ${isOpen ? 'open' : ''}`}>
               <SearchBar modelos={modelos} />
             </div> 
                    
